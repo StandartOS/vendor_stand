@@ -169,3 +169,4 @@ PRODUCT_PACKAGE_OVERLAYS += \
 include vendor/standart/config/version.mk
 include vendor/standart/config/audio.mk
 include vendor/standart/config/bootanimation.mk
+include vendor/standart/config/fonts.mk
