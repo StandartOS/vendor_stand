@@ -170,3 +170,4 @@ include vendor/standart/config/version.mk
 include vendor/standart/config/audio.mk
 include vendor/standart/config/bootanimation.mk
 include vendor/standart/config/fonts.mk
+include vendor/standart/config/rro_overlays.mk
