@@ -163,6 +163,13 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/standart/overlay
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/standart/overlay/common
 
+# Live Wallpapers
+TARGET_INCLUDE_LIVE_WALLPAPERS ?= true
+ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
+PRODUCT_PACKAGES += \
+    PixelLiveWallpapersOverlay
+endif
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
 # Versioning
