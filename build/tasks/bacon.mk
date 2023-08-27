@@ -27,5 +27,5 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e "\t ===============================-Package complete-========================================="
 	@echo -e "\t Zip: $(STANDARTOS_TARGET_PACKAGE)" >&2
 	@echo -e "\t Size: `du -sh $(STANDARTOS_TARGET_PACKAGE) | awk '{print $$1}' `"
-	@echo -e "sha256: `cat $(STANDARTOS_TARGET_PACKAGE).sha256sum | cut -d ' ' -f 1`"
+	@echo -e "sha256:" $(shell cat $(STANDARTOS_TARGET_PACKAGE).sha256sum | cut -d ' ' -f 1)
 	@echo -e "\t =========================================================================================="
