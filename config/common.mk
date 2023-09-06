@@ -163,12 +163,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/standart/overlay
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/standart/overlay/common
 
-# Live Wallpapers
+# GMS features
+TARGET_SUPPORTS_CALL_RECORDING ?= true
+TARGET_SUPPORTS_GOOGLE_RECORDER ?= true
 TARGET_INCLUDE_LIVE_WALLPAPERS ?= true
-ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
-PRODUCT_PACKAGES += \
-    PixelLiveWallpapersOverlay
-endif
 
 # Repainter integration
 PRODUCT_PACKAGES += \
