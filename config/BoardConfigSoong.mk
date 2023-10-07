@@ -21,7 +21,7 @@ SOONG_CONFIG_standartVarsPlugin :=
 
 define addVar
   SOONG_CONFIG_standartVarsPlugin += $(1)
-  SOONG_CONFIG_standartVarsPlugin_$(1) := $$(subst ",\",$$($1))
+  SOONG_CONFIG_standartVarsPlugin_$(1) := $$(subst ",",$$($1))
 endef
 
 $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
