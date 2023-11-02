@@ -6,6 +6,7 @@ endif
 
 # Internal version
 STANDARTOS_VERSION := QPR1
+STANDARTOS_BUILD_TYPE ?= unsigned
 
 # Platform version
 PLAT_VERSION := 14.0
@@ -17,4 +18,4 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.version.custom=$(STANDARTOS_VERSION) \
     ro.build.version.device=$(TARGET_PRODUCT_SHORT) \
     ro.standart.build.version=$(STANDARTOS_VERSION) \
-    ro.modversion=$(STANDARTOS_VERSION)
+    ro.standart.buildtype=$(STANDARTOS_BUILD_TYPE)
