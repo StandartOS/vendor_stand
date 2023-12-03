@@ -175,10 +175,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/standart/prebuilt/common/etc/init/init.standartos-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.pixelbuilds-updater.rc
 
-# Repainter integration
-PRODUCT_PACKAGES += \
-    RepainterServicePriv
-
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
 # Versioning
