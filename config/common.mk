@@ -171,10 +171,6 @@ PRODUCT_PACKAGES += \
 	libtextclassifier_actions_suggestions_universal_model \
 	libtextclassifier_lang_id_model
 
-# Repainter integration
-PRODUCT_PACKAGES += \
-    RepainterServicePriv
-
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
 # Versioning
