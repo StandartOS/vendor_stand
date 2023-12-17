@@ -184,4 +184,5 @@ include vendor/standart/config/bootanimation.mk
 include vendor/standart/config/fonts.mk
 include vendor/standart/config/rro_overlays.mk
 include vendor/gms/products/gms.mk
+-include vendor/standart/private/certified_props.mk
 include vendor/standart/config/keys_migration.mk
