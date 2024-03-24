@@ -14,14 +14,18 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# StandartOS update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
-
+STANDARTOS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(STANDARTOS_VERSION).zip
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(SHA256) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).sha256sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(STANDARTOS_TARGET_PACKAGE)
+	$(hide) $(SHA256) $(STANDARTOS_TARGET_PACKAGE) | cut -d ' ' -f1 > $(STANDARTOS_TARGET_PACKAGE).sha256sum
+	@echo "Done"
+	@echo -e "\t ===============================-Package complete-========================================="
+	@echo -e "\t Zip: $(STANDARTOS_TARGET_PACKAGE)" >&2
+	@echo -e "\t Size: `du -sh $(STANDARTOS_TARGET_PACKAGE) | awk '{print $$1}' `"
+	@echo -e "sha256: `cat $(STANDARTOS_TARGET_PACKAGE).sha256sum | cut -d ' ' -f 1`"
+	@echo -e "\t =========================================================================================="
